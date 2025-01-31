@@ -78,4 +78,19 @@ public class Graph2 {
          }
          return dfs;
       }
+
+      public void dfsRec(int node){
+         boolean[] visitedVertex = new boolean[adjList.size()+1];
+          startDFS(node,visitedVertex);
+      }
+
+      public void startDFS(int node,boolean[] visitedVertex){
+         visitedVertex[node] = true;
+          System.out.print(node+" ");
+          for(int vertex: adjList.get(node)){
+              if(!visitedVertex[vertex]){
+                  startDFS(vertex,visitedVertex);
+              }
+          }
+      }
 }

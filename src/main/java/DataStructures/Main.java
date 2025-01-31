@@ -53,19 +53,31 @@ public class Main {
 //       graph2.addNode(7,5);
 //       graph2.addNode(4,5);
         //g2
+//        graph2.addNode(1,2);
+//        graph2.addNode(1,3);
+//        graph2.addNode(2,5);
+//        graph2.addNode(2,6);
+//        graph2.addNode(3,7);
+//        graph2.addNode(3,4);
+//        graph2.addNode(4,8);
+//        graph2.addNode(7,8);
+        //g3
+        graph2.addNode(0,4);
+        graph2.addNode(0,5);
+        graph2.addNode(1,0);
         graph2.addNode(1,2);
-        graph2.addNode(1,3);
-        graph2.addNode(2,5);
-        graph2.addNode(2,6);
-        graph2.addNode(3,7);
-        graph2.addNode(3,4);
-        graph2.addNode(4,8);
-        graph2.addNode(7,8);
+        graph2.addNode(2,0);
+        graph2.addNode(2,3);
+        graph2.addNode(3,0);
+        graph2.addNode(3,1);
+        graph2.addNode(4,2);
+        graph2.addNode(4,4);
         graph2.printGraph();
-        List<Integer> bfs = graph2.DFS(1);
-        for(int node : bfs){
-            System.out.print(node+" ");
-        }
+        graph2.dfsRec(0);
+//        List<Integer> bfs = graph2.DFS(1);
+//        for(int node : bfs){
+//            System.out.print(node+" ");
+//        }
 
     }
 
